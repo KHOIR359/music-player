@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+html {
+  font-size: 10px;
+  font-family: orbitron;
+}
+
+body {
+  background: #0f0f0f;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  background: #212121;
+  margin-bottom: 2.5em;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #f2f2f2;
+  font-size: 1.4em;
+  padding: .6em 1em;
+}
+
+nav ul li a.active {
+  background: #135c86;
+  color: white;
+}
+
+nav ul li a:hover {
+  background: rgba(19, 92, 134, 0.9);
+  color: white;
+}
+
+#musicLyric {
+  height: calc(100vh - 10em);
+  margin: 0 7em;
+  background-color: #171717;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'art title title' 'art lyric visual' 'art lyric visual' 'player player player';
+  -ms-grid-rows: 50px auto auto 50px;
+      grid-template-rows: 50px auto auto 50px;
+  -ms-grid-columns: 200px 600px 1fr;
+      grid-template-columns: 200px 600px 1fr;
+}
+
+#musicLyric .art {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: art;
+  overflow: hidden;
+}
+
+#musicLyric .art img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: right;
+     object-position: right;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#musicLyric .title {
+  color: #2099df;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  padding: .3em 2em;
+  text-align: center;
+  font-size: 3em;
+}
+
+#musicLyric .lyrics {
+  font-family: montserrat;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: lyric;
+  font-size: 3.4em;
+  overflow: hidden;
+  white-space: pre-line;
+  padding: 3em 1em !important;
+}
+
+#musicLyric .visual {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: visual;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 3em 1em !important;
+}
+
+#musicLyric .player {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: player;
+  border-radius: 0;
+}
+
+#wrapper {
+  padding: 0px;
+  width: 100%;
+}
+
+#seek {
+  width: 100%;
+}
+
+#player {
+  background-color: #084B8A;
+  width: 100%;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="image"] {
+  float: left;
+  height: 20px;
+  margin-left: 2px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+#vol_img {
+  margin-left: 150px;
+  width: 20px;
+}
+/*# sourceMappingURL=main.css.map */

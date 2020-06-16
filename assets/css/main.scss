@@ -1,0 +1,153 @@
+$dark1: hsl(0, 0%, 6%);
+$dark2: hsl(0, 0%, 9%);
+$dark3: hsl(0, 0%, 13%);
+$dark4: hsl(0, 0%, 18%);
+$white: white;
+$primary-hue: 202;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $white;
+}
+
+html {
+    font-size: 10px;
+    font-family: orbitron;
+}
+
+body {
+    background: $dark1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    $nav-bg: $dark3;
+    $nav-text: $white;
+    background: $nav-bg;
+    margin-bottom: 2.5em;
+
+    ul {
+        li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                color: darken($nav-text, 5);
+                font-size: 1.4em;
+                padding: .6em 1em;
+
+                &.active {
+                    $active-bg: hsl($primary-hue, 75%, 30%);
+                    background: $active-bg;
+                    color: $nav-text;
+                }
+
+                &:hover {
+                    $active-bg: hsl(202, 75%, 30%);
+                    background: transparentize($color: $active-bg, $amount: .1);
+                    color: $nav-text;
+                }
+            }
+
+        }
+    }
+}
+
+#musicLyric {
+    height: calc(100vh - 10em);
+    margin: 0 7em;
+    background-color: $dark2;
+    display: grid;
+    grid-template-areas: 'art title title'
+        'art lyric visual'
+        'art lyric visual'
+        'player player player'
+    ;
+    grid-template-rows: 50px auto auto 50px;
+    grid-template-columns: 200px 600px 1fr;
+
+    .art {
+        grid-area: art;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-position: right;
+            object-fit: cover;
+
+        }
+    }
+
+    .title {
+        color: hsl($primary-hue, 75%, 50%);
+        grid-area: title;
+        padding: .3em 2em;
+        text-align: center;
+        font-size: 3em;
+
+    }
+
+    .lyrics {
+        font-family: montserrat;
+        grid-area: lyric;
+        font-size: 3.4em;
+        overflow: hidden;
+        white-space: pre-line;
+        padding: 3em 1em !important;
+    }
+
+    .visual {
+        grid-area: visual;
+        display: flex;
+        align-items: flex-end;
+        padding: 3em 1em !important;
+
+    }
+
+    .player {
+        grid-area: player;
+        border-radius: 0;
+    }
+}
+
+
+
+#wrapper {
+    padding: 0px;
+    width: 100%;
+}
+
+#seek {
+    width: 100%;
+}
+
+#player {
+    background-color: #084B8A;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type="image"] {
+    float: left;
+    height: 20px;
+    margin-left: 2px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+#vol_img {
+    margin-left: 150px;
+    width: 20px;
+}

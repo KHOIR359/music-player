@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Lyric</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Follow Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="musicLyric">
+        <div class="art"><img src="assets/img/tog.jpg"></div>
+        <div class="title">Tower of God ending - slump by stray kid</div>
+        <div class="lyrics">Play Now!</div>
+        <div class="visual" id="visual">
+            <canvas id="visual-canvas" height="300%"></canvas>
+        </div>
+
+        <div id='player' class="player">
+            <audio id="music_player">
+                <source src="assets/mp3/tog-ed.mp3" />
+            </audio>
+            <input type="image" src="assets/img/play.png" onclick="play_aud()" id="play_button">
+            <input type="image" src="assets/img/pause.png" onclick="pause_aud()" id="play_button">
+            <input type="image" src="assets/img/stop.png" onclick="stop_aud()" id="play_button">
+            <img src="assets/img/volume.png" id="vol_img">
+            <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value=".1">
+            <div>
+                <input type="range" id="seek" step="1" min="0" max="" value="0">
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main2.js"></script>
+</body>
+
+</html>
